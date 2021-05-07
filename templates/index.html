@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content= "width=device-width, initial scale=1.0">
+        <title>Sam's Art Portfolio</title> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+
+    <body>
+        <header>
+            <div class="mylogo">
+                <img src="static/images/sam_logo.png" width="50" height="50" alt="sam's logo">
+            </div>
+
+            <button class="nav-btn" aria-label="nav-button">
+                <span class="btn"></span>
+            </button>
+
+            <nav class="mynav">
+                <ul class="mynav_ls">
+                    <li class="mynav_item"> <a href="#home" class="mynav_link">Home</a></li>
+                    <li class="mynav_item"> <a href="#skills" class="mynav_link">Creative Styles</a></li>
+                    <li class="mynav_item"> <a href="#about" class="mynav_link">About Me</a></li>
+                    <li class="mynav_item"> <a href="#projects" class="mynav_link">Art Projects</a></li>
+                    <li class="mynav_item"> <a href="contact.html" class="mynav_link">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Top Introduction Section-->
+        <section class="topintro" id="home">
+            <h1 class="sectitle sectitle_intro">
+                Hello. I am <strong>Sam Jones</strong>A self-taught artist.
+            </h1>
+
+            <p class="secsubtitle secsubtitle_intro"><strong>I Present You my Art Portfolio</strong></p>
+
+            <img src="static/images/artist.jpg" width= "220" height="220" alt="sam display image" class="first_img">
+
+        </section>
+
+        <!--My Creative Style Section-->
+        <section class="myskills" id="skills">
+            <h2 class="sectitle sectitle_skills">I create...</h2>
+            <div class="skills">
+                <div class="skill">
+                    <h3>Decorative Art</h3>
+                    <p>I create unique artistic pieces you can use to decorate
+                    your personal or professaional space. My decorative pieces
+                    focus on vintage and temporary themes.</p>
+                </div>
+
+                <div class="skill">
+                    <h3>Fine Art</h3>
+                    <p>Using paintings, I create fine art that focuses
+                    on presenting both the beauty of the world as we see it,
+                    and beauty as conceived by the mind.</p>
+                </div>
+
+                <div class="skill">
+                    <h3>Visual Art</h3>
+                    <p>Capitalizing on the power of the eye and mind, I draw paintings
+                    that bring you closer to nature, events, imaginations, and emotions,
+                    and the world.</p>
+                </div>
+            </div>
+            <a href="#projects" class="button">My Art Projects</a>
+        </section>
+
+        <!--My artist bio-->
+        <section class="bio" id="about">
+            <h2 class="sectitle sectitle_bio">A little about me...</h2>
+            <div class="bio_body">
+                <p>I am self-taught Kenyan painter and artist with over 5 years
+                of expeerience in creative work. I have created paintings
+                for both personal and commercial decorations. Below, you will find
+                some of my best works, and projects that I really enjoyed working on.</p>
+            </div>
+            <img src="static/images/artist.jpg" alt="a full image of the artist" class="bio_img">
+        </section>
+
+        <!--My completed projects-->
+        <section class="myprojects" id="projects">
+            <h2 class="sectitle">Some Art Projects I've Completed</h2>
+            <p class="secsubtitle">Check out some of my work</p>
+            <div class="mywork">
+                <!--Project 1-->
+                <a href="portfolio-page.html" class="work_piece">
+                    <img src="static/images/img1.jpg"  alt="My first project" class="workpiece_img">
+                </a>
+
+                <!--Project 2-->
+                <a href="portfolioII-page.html" class="work_piece">
+                    <img src="static/images/img2.jpg"  alt="My second project" class="workpiece_img">
+                </a>
+
+                <!--Project 3-->
+                <a href="#" class="work_piece">
+                    <img src="static/images/img3.jpg"  alt="My third project" class="workpiece_img">
+                </a>
+
+                <!--Project 4-->
+                <a href="#" class="work_piece">
+                    <img src="static/images/img4.jpg"  alt="My fourth project" class="workpiece_img">
+                </a>
+
+                <!--Project 5-->
+                <a href="#" class="work_piece">
+                    <img src="static/images/img5.jpg"   alt="My fifth project" class="workpiece_img">
+                </a>
+
+                <!--Project 6-->
+                <a href="#" class="work_piece">
+                    <img src="static/images/img6.jpg"  alt="My sixth project" class="workpiece_img">
+                </a>
+            </div>
+        </section>
+
+        <!--page footer-->
+        <footer class="footer">
+            <!--insert your own here-->
+            <a href="mailto:fort.smg@gmail.com" class="footer_link">fort.smg@gmail.com</a>
+            <br>
+            <a href="contact.html" class="footer_link">contact me</a>
+
+            <ul class="social_links">
+                <li class="socialitem">
+                    <a class="socialitemlink" href="https://twitter.com"><i class="fab fa-twitter"></i> Twitter</a>
+                </li>
+                <li class="socialitem">
+                    <a class="socialitemlink" href="https://facebook.com"><i class="fab fa-facebook-square"></i> Facebook</a>
+                </li>
+                <li class="socialitem">
+                    <a class="socialitemlink:" href="https://instagram.com"><i class="fab fa-instagram-square"></i> Instagram</a>
+                </li>
+            </ul>
+        </footer>
+        <script src="static/js/index.js"></script>
+    </body>
+</html>

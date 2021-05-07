@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content= "width=device-width, initial scale=1.0">
+        <title>Sam's Art Portfolio</title> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" 
+            integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+
+    <body>
+        <header>
+            <div class="mylogo">
+                <img src="static/images/sam_logo.png" width="50" height="50" alt="sam's logo">
+            </div>
+
+            <button class="nav-btn" aria-label="nav-button">
+                <span class="btn"></span>
+            </button>
+
+            <nav class="mynav">
+                <ul class="mynav_ls">
+                    <li class="mynav_item"> <a href="index.html" class="mynav_link">Home</a></li>
+                    <li class="mynav_item"> <a href="index.html#skills" class="mynav_link">Creative Styles</a></li>
+                    <li class="mynav_item"> <a href="index.html#about" class="mynav_link">About Me</a></li>
+                    <li class="mynav_item"> <a href="index.html#projects" class="mynav_link">Art Projects</a></li>
+                    <li class="mynav_item"> <a href="contact.html" class="mynav_link">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!--Top Introduction Section-->
+        <section class="topintro" id="home">
+            <h1 class="sectitle sectitle_intro">
+                My <strong>First Project</strong>
+            </h1>
+
+            <p class="secsubtitle secsubtitle_intro"><strong>The Rosy Path</strong></p>
+
+            <img src="static/images/img1.jpg" alt="first project" class="first_img">
+        </section>
+
+        <div class="portfolio_detail">
+            <p>This was my first painting. I began working on it in January 2016 and finished it in
+                in march of the same year;
+            </p>
+            <img src="static/images/img1.jpg" alt="first project">
+            <p>It was inspired by one of my visits to the scenic fields of 
+                Kiambu Country, on the northern side of the Aberdare slopes. 
+            </p>
+            <p>On one sunny
+                morning, the fields were very clear, with flowers spanning miles unending.
+                The scenery was beckoning; urging me to pick up my brush and recreate it.
+            </p>
+            <a href="index.html#projects" style="margin: 0 auto;">Back to Projects</a>
+        </div>
+
+
+        <!--page footer-->
+        <footer class="footer">
+            <!--insert your own here-->
+            <a href="mailto:fort.smg@gmail.com" class="footer_link">fort.smg@gmail.com</a>
+            <br>
+            <a href="contact.html" class="footer_link">contact me</a>
+
+            <ul class="social_links">
+                <li class="socialitem">
+                    <a class="socialitemlink" href="https://twitter.com">Twitter<i class="fab fa-twitter"></i></a>
+                </li>
+                <li class="socialitem">
+                    <a class="socialitemlink" href="https://facebook.com">Facebook<i class="fab fa-facebook-square"></i></a>
+                </li>
+                <li class="socialitem">
+                    <a class="socialitemlink:" href="https://instagram.com">Instagram<i class="fab fa-instagram-square"></i></a>
+                </li>
+            </ul>
+        </footer>
+        <script src="static/js/index.js"></script>
+    </body>
+</html>

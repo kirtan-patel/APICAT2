@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content= "width=device-width, initial scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+    <title>Contact form</title>
+</head>
+<body>
+
+    <header>
+        <div class="mylogo">
+            <img src="static/images/sam_logo.png" width="50" height="50" alt="sam's logo">
+        </div>
+
+        <button class="nav-btn" aria-label="nav-button">
+            <span class="btn"></span>
+        </button>
+
+        <nav class="mynav">
+            <ul class="mynav_ls">
+                <li class="mynav_item"><a href="index.html#home" class="mynav_link">Home</a></li>
+                <li class="mynav_item"> <a href="index.html#skills" class="mynav_link">Creative Styles</a></li>
+                <li class="mynav_item"> <a href="index.html#about" class="mynav_link">About Me</a></li>
+                <li class="mynav_item"> <a href="index.html#projects" class="mynav_link">Art Projects</a></li>
+                <li class="mynav_item"> <a href="contact.html" class="mynav_link">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form action="{{url_for('insert')}}" method="POST">
+      
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="Fname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="Lname" placeholder="Your last name..">
+      
+          <label for="country">Email</label>
+          <input type="text" id="email" name="Email" placeholder="Your email ID..">
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="message" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+
+      </div>
+      
+      <script src="static/js/index.js"></script>
+</body>
+</html>

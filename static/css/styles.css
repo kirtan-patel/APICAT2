@@ -1,0 +1,398 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*updatable custom properties*/
+
+:root {
+  --ff-primary:'Quicksand', sans-serif;;
+  --ff-secondary: 'Source Code Pro', monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light:white;
+  --clr-dark: #1b1515;
+  --clr-acc: #f844bc;
+  --clr-dull: gray;
+
+    --fs-h1: 4rem;
+    --fs-h2: 3rem;
+    --fs-h3: 1.2rem;
+    --fs-body: 1rem;
+}
+
+@media (min-width: 900px){
+  :root{
+    --fs-h1: 4rem;
+    --fs-h2: 3rem;
+    --fs-h3: 1.2rem;
+    --fs-body: 1.2rem;
+  }
+}
+
+/*create the general styles*/
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.5;
+}
+
+.button {
+  display: inline-block;
+  padding: .5em 1.2em;
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  letter-spacing: 2px;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+section{
+   padding: 1em 2em;
+}
+
+
+strong { font-weight: var(--fw-bold) }
+
+/*typography*/
+
+h1, h2, h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+
+h1{font-size: var(--fs-h1);}
+h2{font-size: var(--fs-h2);}
+h3{font-size: var(--fs-h3);}
+
+.sectitle{
+  margin-bottom: .25em;
+}
+
+.sectitle_intro{
+  font-weight: var(--fw-reg);
+}
+
+.sectitle_intro strong{
+  display: block;
+}
+
+.sectsubtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.secsubtitle_intro,
+.secsubtitle_bio {
+  background: rgb(116, 11, 75);
+  font-family: var(--ff-secondary);
+  color: var(--clr-light);
+}
+
+/*Header section*/
+
+header {
+  display: flex; 
+  justify-content: space-between;
+  padding: 1em;
+}
+
+
+/*Navigation Styling*/
+.mynav{
+    position: fixed;
+    background: rgb(87, 5, 50);
+    color: var(--clr-light);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+}
+
+.mynav_ls{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.mynav_link {
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h2);
+}
+
+.mynav_link:hover {
+  color:var(--clr-dull);
+}
+
+.nav-btn{
+  padding: .7em;
+  background: snow;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 500;
+}
+
+.open-nav .mynav{
+  transform: translateX(0);
+}
+
+.open-nav .nav-btn{
+  position: fixed;
+}
+
+.open-nav .btn{
+  transform: rotate(.63turn);
+}
+
+.open-nav .btn::before{
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.open-nav .btn::after{
+  opacity: 0;
+}
+
+
+.btn{
+  display: block;
+  position: relative;
+}
+
+.btn, .btn::before, .btn::after{
+  background: var(--clr-dark);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+.btn::before, .btn::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.btn::before { top: 6px; }
+.btn::after { bottom: 6px;}
+
+/*Intro section*/
+
+.topintro {
+  position: relative; /*could change*/;
+}
+
+@media (min-width:900px){
+  .topintro{
+    display: grid;
+    grid-column-gap: 1em;
+    width: min-content;
+    margin: 0 auto;
+    grid-template-areas: 
+     "img title"
+     "img subtitle";
+    grid-template-columns: min-content max-content;
+  }
+
+  .first_img {
+    grid-area: img;
+    min-width: 250px;
+    min-height: auto;
+  }
+}
+
+.secsubtitle_intro {
+  align-self: start;
+  grid-column: -1/1;
+  text-align: center;
+}
+
+/*style my services section*/
+
+.myskills {
+  background-color: var(--clr-acc);
+  background-image: url(../images/back.jpg);
+  background-size: cover;/*doesn't repeat*/
+  color: var(--clr-light);
+  background-blend-mode: multiply;
+  text-align: center;
+}
+
+.sectitle_skills {
+  color: var(--clr-light);
+  position: relative;
+}
+
+.sectitle_skills::after {
+  content: '';
+  display: block;
+  width: 2em;
+  height: 1 px;
+  margin: 0.5em auto 1em;
+  background-color: currentColor;
+  opacity: 0.25;
+}
+
+.skills {
+  margin-bottom: 3.5em;
+}
+
+.skill {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media(min-width: 1000px){
+  .skills {
+    display: flex;
+    max-width: 1000px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .skill + .skill {
+    margin-left: 1em;
+  }
+}
+
+/*Styling the bio*/
+
+.bio {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width:700px){
+    .bio {
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      grid-template-areas: 
+      "title image"
+      "subtitle image"
+      "text image";
+      grid-column-gap: 1em;
+    }
+
+    .sectitle_bio {
+      grid-area: title;
+    }
+
+    .secsubtitle_bio {
+      grid-row: 3;
+    }
+
+    .bio_img {
+      grid-area: image;
+    }
+  }
+
+/*Styling my projects*/
+
+  .myprojects {
+    background-color: var(--clr-acc);
+    color: var(--clr-light);
+    text-align: center;
+    background-image: url(../images/back.jpg);
+    background-blend-mode: multiply;   
+  }
+
+  .mywork{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+  }
+
+  .workpiece_img {
+    height: 300px;
+    width: 500px;
+    padding: .2rem;
+  }
+
+  .workpiece_img:hover{
+    transform: scale(1.02);
+    opacity: 0.7;
+  }
+
+/*styling the footer*/
+
+.footer {
+  background: #13010d;
+  color: var(--clr-light);
+  text-align: center;
+  padding: 2.5em 0;
+  font-size: var(--fs-h3);
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer_link{
+  font-weight: var(--fw-bold);
+}
+
+.footer_link:hover {
+  text-decoration: underline;
+}
+
+.footer_link:hover, socialitemlink:hover{
+  opacity: 50%;
+
+}
+
+.social_links{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+  padding: 0;
+}
+
+.socialitem {
+  display: block;
+  margin: 0 .8em;
+}
+
+.socialitem_link{
+  padding: .2em;
+}
+
+.portfolio_detail {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio_detail p {
+  max-width: 700px;
+}
