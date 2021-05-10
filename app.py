@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'bigkey'
+app.config['SECRET_KEY'] = 'idk what to type here'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= True
 db = SQLAlchemy(app)
@@ -49,7 +49,7 @@ def insert():
 
 @app.route("/")
 def home():
-   return render_template("index.html")
+   return redirect("/index.html")
 
 @app.route("/index.html")
 def home_1():
