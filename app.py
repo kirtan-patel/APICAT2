@@ -41,7 +41,7 @@ def insert():
         db.session.add(my_data)
         db.session.commit()
  
-        print("Employee Inserted Successfully")
+        print(" Inserted Successfully")
  
         return render_template("contact.html")
       
