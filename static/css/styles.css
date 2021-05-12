@@ -120,7 +120,7 @@ header {
 /*Navigation Styling*/
 .mynav{
     position: fixed;
-    background: rgb(87, 5, 50);
+    background: rgb(87, 5, 50, .9);
     color: var(--clr-light);
     top: 0;
     bottom: 0;
