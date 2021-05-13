@@ -52,13 +52,13 @@ input[type=text], select, textarea {
   
   /* When moving the mouse over the submit button, add a darker green color */
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #3a973fd2;
   }
   
   /* Add a background color and some padding around the form */
   .container {
     display:flex;
-    background:rgb(115, 8, 67);
+    background:rgb(115, 8, 67, 0.6);
     box-shadow:0px 2px 4px rgba(0, 0, 0, 0.562);
     border-radius: 5px;
     margin-top: 50px;
@@ -71,13 +71,17 @@ input[type=text], select, textarea {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    
+  }
+
+  .container:hover{
+    background:rgb(115, 8, 67);
   }
 
   label{
     font-weight: bold;
     color: bisque;
   }
+  
 
   header {
     display: flex; 
