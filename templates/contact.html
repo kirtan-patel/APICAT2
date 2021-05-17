@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content= "width=device-width, initial scale=1">
@@ -14,8 +15,8 @@
     <header>
         <div class="mylogo">
             <img src="static/images/sam_logo.png" width="50" height="50" alt="sam's logo">
-            
         </div>
+       
 
         <button class="nav-btn" aria-label="nav-button">
             <span class="btn"></span>
@@ -47,6 +48,14 @@
       
           <label for="subject">Subject</label>
           <textarea id="subject" name="message" placeholder="Write something.." style="height:200px"></textarea required>
+        
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <label>{{message}}</label>
+                {% endfor %}
+            {% endif %}
+          {% endwith %}
       
           <input type="submit" value="Submit">
       
