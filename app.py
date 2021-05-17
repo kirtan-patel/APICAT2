@@ -1,6 +1,5 @@
-from flask import Flask, render_template,request,url_for,redirect
+from flask import Flask, render_template,request,url_for,redirect, flash
 from flask_sqlalchemy import SQLAlchemy
-
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'idk what to type here'
@@ -40,9 +39,9 @@ def insert():
         my_data = data(Fname,Lname,Email,message)
         db.session.add(my_data)
         db.session.commit()
- 
-        print(" Inserted Successfully")
- 
+        
+        flash("Message has been sent")
+        
         return render_template("contact.html")
       
       
