@@ -87,7 +87,11 @@ input[type=text], select, textarea {
     display: flex; 
     justify-content: space-between;
     padding: 1em;
-    background-color: #1d252c;
+    background-color: #edc7b7;
+  }
+
+  #con{
+    align-items: center;
   }
 
   /*Navigation Styling*/
